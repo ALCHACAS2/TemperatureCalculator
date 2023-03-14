@@ -69,7 +69,7 @@ input[type="radio"]:checked + label {
   border-radius: 10px;
   display: flex;
   justify-content: center;
-  align-items: center;
+  align-items: flex-start;
   margin: 0 20px;
 }
 
