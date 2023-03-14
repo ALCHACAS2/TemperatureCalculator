@@ -3,10 +3,45 @@
   <head>
     <title>Calculadora de temperatura</title>
     <link rel="icon" href="images/calcular.png" />
+    <script src="Scrip.js"></script>
+    <link rel="stylesheet" type="text/css" href="Style.css" />
   </head>
   <body>
-    <input text="Celsius" placeholder="Celsius" id="celsius"/>
-    <button onclick="convertCelsiusToFahrenheit()">Calcular</button>
-    <h1 id="resultado"></h1>
+    <div>
+      <input text="Celsius" placeholder="Celsius" id="celsius" />
+      <button onclick="convertCelsiusToFahrenheit()">Calcular</button>
+      <p id="resultado"></p>
+    </div>
+    <!--arriba era pruebaaaa-->
+    <div class="container-input">
+      <h4 class="title">Temperature calculator</h4>
+    </div>
+    <div class="container-elements">
+      <div class="container-elements-center">
+        <label style="font-size: 5vh">Selecciona una opción:</label>
+        <!--input type="radio" id="c" name="eleccion">Celsius</!--input>
+        <input type="radio" id="f" name="eleccion">Fahrenheit</input>
+        <input type="radio" id="k" name="eleccion">Kelvin</input-->
+        <input class="input-selection" type="radio" id="c" name="eleccion" />
+        <input class="input-selection" type="radio" id="f" name="eleccion" />
+        <input class="input-selection" type="radio" id="k" name="eleccion" />
+      </div>
+      <br />
+      <div class="container-elements-center">
+        <label style="font-size: 5vh">Digite la temperatura a convertir</label>
+        <input class="input" placeholder="Grados" id="celsius" />
+      </div>
+    </div>
+    <div class="container-output">
+      <div class="box">
+        <p>Texto del recuadro 1</p>
+      </div>
+      <div class="box">
+        <p>Texto del recuadro 2</p>
+      </div>
+      <div class="box">
+        <p>Texto del recuadro 3</p>
+      </div>
+    </div>
   </body>
 </html>

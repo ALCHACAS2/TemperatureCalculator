@@ -1,8 +1,8 @@
 function convertCelsiusToFahrenheit() {
-    celsius = document.getElementById("celsius").value;
+  celsius = document.getElementById("celsius").value;
   /*--------°F = °C x 1.8 + 32---------*/
   var fahrenheit = celsius * 1.8 + 32;
-  return fahrenheit;
+  document.getElementById("resultado").textContent = fahrenheit;
 }
 function convertCelsiusToKelvin() {
   /*----------K = °C + 273.15------------*/
