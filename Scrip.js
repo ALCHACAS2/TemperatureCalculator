@@ -40,4 +40,5 @@ function celsiusToFahrenheit(celsius) {
 function todo(){
   convertCelsiusToFahrenheit();
   convertCelsiusToKelvin();
+  document.getElementById("resultado-celsius").textContent= 13;
 }
