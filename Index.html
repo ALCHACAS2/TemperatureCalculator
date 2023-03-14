@@ -7,12 +7,6 @@
     <link rel="stylesheet" type="text/css" href="Style.css" />
   </head>
   <body>
-    <div>
-      <input text="Celsius" placeholder="Celsius" id="celsius" />
-      <button onclick="convertCelsiusToFahrenheit()">Calcular</button>
-      <p id="resultado"></p>
-    </div>
-    <!--arriba era pruebaaaa-->
     <div class="container-input">
       <h4 class="title">Temperature calculator</h4>
     </div>
@@ -29,21 +23,23 @@
       <br />
       <div class="container-elements-center">
         <label style="font-size: 5vh">Digite la temperatura a convertir</label>
-        <input class="input" placeholder="Grados" id="celsius" />
+        <input class="input" placeholder="grados" id="grados" />
+        <button onclick="convertCelsiusToFahrenheit()">convert</button>
       </div>
     </div>
     <div class="container-output">
       <div class="box">
         <p>Celsius (C):</p>
-        <input class="result-box" type="text-celsius" placeholder="Ingresa un valor aquí">
+        <output class="result-box" type="text" id="resultado-celsius">Resultado</output>
       </div>
       <div class="box">
         <p>Fahrenheit(F):</p>
-        <input class="result-box" type="text-Fahrenheit" placeholder="Ingresa un valor aquí">
+        <output class="result-box" type="text" id="resultado-fahrenheit">Resultado</output>
       </div>
       <div class="box">
         <p>Kelvin(K):</p>
-        <input class="result-box" type="text-Kelvin" placeholder="Ingresa un valor aquí">
+        <output class="result-box" type="text" id="resultado-kelvin">Resultado</output>
+          
       </div>
     </div>
   </body>

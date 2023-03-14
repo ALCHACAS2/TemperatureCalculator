@@ -77,6 +77,8 @@ input[type="radio"]:checked + label {
 }
 
 .result-box {
+  margin-left: 15%;
+  max-width: 60%;
   align-items:center ;
 }
 
