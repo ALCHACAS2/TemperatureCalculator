@@ -67,11 +67,26 @@ input[type="radio"]:checked + label {
   background-color: white;
   border: 1px solid black;
   border-radius: 10px;
-  display: flex;
+  /* display: flex; */
   justify-content: center;
   align-items: flex-start;
   margin: 0 20px;
 }
+
+.result-box {
+  align-items:center ;
+}
+
+.box input {
+  width: 80%;
+  font-size: 16px;
+  padding: 10px;
+  border: none;
+  outline: none;
+  align-items: center;
+  justify-content: center;
+}
+
 
 .box p {
   text-align: center;
