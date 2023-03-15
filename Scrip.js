@@ -68,3 +68,9 @@ function todo() {
     document.getElementById("resultado-kelvin").textContent = document.getElementById("grados").value;
   }
 }
+function validacionDeEntrada(){
+  var result = document.getElementById(grados).value;
+  if(document.getElementById(grados).value===null || document.getElementById(grados).t){
+
+  }
+}
