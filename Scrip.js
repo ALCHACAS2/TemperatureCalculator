@@ -37,7 +37,6 @@ function celsiusToFahrenheit(celsius) {
 }
 
 const radios = document.getElementsByName("eleccion");
-
 function seleccion() {
   let valorSeleccionado;
   for (let i = 0; i < radios.length; i++) {
@@ -73,4 +72,9 @@ function validacionDeEntrada() {
   }else{
     document.getElementById("resultado-celsius").textContent = "lleno";
   }
+}
+function getValue(){
+var valor = document.getElementById("rango").value;
+  document.getElementById("resultado").textContent = valor;
+  return valor;
 }

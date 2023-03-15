@@ -3,7 +3,7 @@
   <head>
     <title>Calculadora de temperatura</title>
     <link rel="icon" href="images/calcular.png" />
-    <script src="Scrip.js"></script>
+    <script src="Prueba.js"></script>
     <link rel="stylesheet" type="text/css" href="Style.css" />
   </head>
   <body>
@@ -14,15 +14,42 @@
       <div class="container-elements-center">
         <div class="container-elements-center">
           <label>Digite la temperatura a convertir</label>
-          <input class="input" placeholder="grados" id="grados" oninput="todo()" value="0"/>
+          <input
+            class="input"
+            placeholder="grados"
+            id="grados"
+            oninput="todo()"
+            value="0"
+          />
         </div>
-        <label style="font-size: 4vh;">Selecciona una opción:</label>
-        <input class="input-selection" type="radio" id="c" name="eleccion" oninput="todo()">Celsius</input>
+        <label style="font-size: 4vh">Selecciona una opción:</label>
+        <!--input class="input-selection" type="radio" id="c" name="eleccion" oninput="todo()">Celsius</!--input>
         <input class="input-selection" type="radio" id="f" name="eleccion" oninput="todo()">Fahrenheit</input>
-        <input class="input-selection" type="radio" id="k" name="eleccion" oninput="todo()">Kelvin</input>
-        <!--input class="input-selection" type="radio" id="c" name="eleccion" oninput="todo()"/>
-        <input class="input-selection" type="radio" id="f" name="eleccion" oninput="todo()"/>
-        <input class="input-selection" type="radio" id="k" name="eleccion" oninput="todo()"/-->
+        <input class="input-selection" type="radio" id="k" name="eleccion" oninput="todo()">Kelvin</input-->
+        <input
+          class="input-selection"
+          type="radio"
+          id="c"
+          name="eleccion"
+          oninput="todo()"
+        />
+        <a>Celsius</a>
+        <input
+          class="input-selection"
+          type="radio"
+          id="f"
+          name="eleccion"
+          oninput="todo()"
+        />
+        <a>Fahrenheit</a>
+        <input
+          class="input-selection"
+          type="radio"
+          id="k"
+          name="eleccion"
+          oninput="todo()"
+        />
+        <a>Kelvin</a>
       </div>
     </div>
     <div class="container-output">
@@ -35,13 +62,26 @@
       <div class="box">
         <p>Fahrenheit(F):</p>
         <output class="result-box" type="text" id="resultado-fahrenheit"
-          >Resultado</output
-        >
+          >Resultado</output>
       </div>
       <div class="box">
         <p>Kelvin(K):</p>
-        <output class="result-box" type="text" id="resultado-kelvin">Resultado</output>
+        <output class="result-box" type="text" id="resultado-kelvin"
+          >Resultado</output>
       </div>
     </div>
+    <label for="rango">Selecciona un valor:</label>
+    <input
+      style="width: 90%"
+      type="range"
+      id="rango"
+      name="rango"
+      min="-1000"
+      max="1000"
+      step="1"
+      value="500"
+      oninput="getValue ()"
+    />
+    <output class="result-box" type="text" id="resultado">Resultado</output>
   </body>
 </html>
