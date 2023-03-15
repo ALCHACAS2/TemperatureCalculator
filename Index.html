@@ -18,94 +18,11 @@
     >
       <h4 class="text-2xl text-white">Temperature calculator</h4>
     </div>
-
-    <div class="container mx-auto my-8">
-      <div class="grid grid-cols-1 sm:grid-cols-3 gap-10">
-        <div class="bg-gray-200 rounded-md p-6">
-          <label for="grados" class="block text-gray-700 font-bold mb-2"
-            >Digite la temperatura a convertir</label
-          >
-          <input
-            id="grados"
-            type="text"
-            class="block w-full bg-white border border-gray-400 rounded py-3 px-4 mb-3 leading-tight focus:outline-none focus:bg-white focus:border-gray-500"
-            placeholder="grados"
-            oninput="todo()"
-          />
-        </div>
-
-        <div class="bg-gray-200 rounded-md p-6">
-          <label for="c" class="block text-gray-700 font-bold mb-2 text-lg"
-            >Selecciona una opción:</label
-          >
-          <div class="mt-2">
-            <input
-              type="radio"
-              id="c"
-              name="eleccion"
-              class="mr-2"
-              oninput="todo()"
-            />
-            <label for="c" class="text-gray-700 font-medium">Celsius</label>
-          </div>
-          <div class="mt-2">
-            <input
-              type="radio"
-              id="f"
-              name="eleccion"
-              class="mr-2"
-              oninput="todo()"
-            />
-            <label for="f" class="text-gray-700 font-medium">Fahrenheit</label>
-          </div>
-          <div class="mt-2">
-            <input
-              type="radio"
-              id="k"
-              name="eleccion"
-              class="mr-2"
-              oninput="todo()"
-            />
-            <label for="k" class="text-gray-700 font-medium">Kelvin</label>
-          </div>
-        </div>
-
-        <div class="bg-gray-200 rounded-md p-6">
-          <div class="flex justify-center">
-            <div
-              class="box w-40 h-24 bg-white border border-black rounded-md flex justify-center items-center"
-            >
-              <p class="text-lg font-medium">Celsius (C):</p>
-              <output
-                id="resultado-celsius"
-                type="text"
-                class="ml-2 text-lg font-medium text-center"
-                >Resultado</output
-              >
-            </div>
-            <div
-              class="box w-40 h-24 bg-white border border-black rounded-md flex justify-center items-center ml-6"
-            >
-              <p class="text-lg font-medium">Fahrenheit (F):</p>
-              <output
-                id="resultado-fahrenheit"
-                type="text"
-                class="ml-2 text-lg font-medium text-center"
-                >Resultado</output
-              >
-            </div>
-            <div
-              class="box w-40 h-24 bg-white border border-black rounded-md flex justify-center items-center ml-6"
-            >
-              <p class="text-lg font-medium">Kelvin (K):</p>
-              <output
-                id="resultado-kelvin"
-                type="text"
-                class="ml-2 text-lg font-medium text-center"
-                >Resultado</output
-              >
-            </div>
-          </div>
+    <div class="container-elements">
+      <div class="container-elements-center">
+        <div class="container-elements-center">
+          <label>Digite la temperatura a convertir</label>
+          <input class="input" placeholder="grados" id="grados" oninput="todo()" value="0"/>
         </div>
       </div>
     </div>
