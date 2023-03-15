@@ -5,16 +5,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Calculadora de temperatura</title>
     <link rel="icon" href="images/calcular.png" />
-<<<<<<< HEAD
-    <script src="Prueba.js"></script>
-    <link rel="stylesheet" type="text/css" href="Style.css" />
-=======
     <script src="Scrip.js"></script>
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/tailwindcss/2.2.16/tailwind.min.css"
     />
->>>>>>> 37499bcf0d9aaa3a19de4483298fe271103892ce
   </head>
 
   <body class="bg-gray-100">
@@ -23,66 +18,6 @@
     >
       <h4 class="text-2xl text-white">Temperature calculator</h4>
     </div>
-<<<<<<< HEAD
-    <div class="container-elements">
-      <div class="container-elements-center">
-        <div class="container-elements-center">
-          <label>Digite la temperatura a convertir</label>
-          <input
-            class="input"
-            placeholder="grados"
-            id="grados"
-            oninput="todo()"
-            value="0"
-          />
-        </div>
-        <label style="font-size: 4vh">Selecciona una opción:</label>
-        <!--input class="input-selection" type="radio" id="c" name="eleccion" oninput="todo()">Celsius</!--input>
-        <input class="input-selection" type="radio" id="f" name="eleccion" oninput="todo()">Fahrenheit</input>
-        <input class="input-selection" type="radio" id="k" name="eleccion" oninput="todo()">Kelvin</input-->
-        <input
-          class="input-selection"
-          type="radio"
-          id="c"
-          name="eleccion"
-          oninput="todo()"
-        />
-        <a>Celsius</a>
-        <input
-          class="input-selection"
-          type="radio"
-          id="f"
-          name="eleccion"
-          oninput="todo()"
-        />
-        <a>Fahrenheit</a>
-        <input
-          class="input-selection"
-          type="radio"
-          id="k"
-          name="eleccion"
-          oninput="todo()"
-        />
-        <a>Kelvin</a>
-      </div>
-    </div>
-    <div class="container-output">
-      <div class="box">
-        <p>Celsius (C):</p>
-        <output class="result-box" type="text" id="resultado-celsius"
-          >Resultado</output
-        >
-      </div>
-      <div class="box">
-        <p>Fahrenheit(F):</p>
-        <output class="result-box" type="text" id="resultado-fahrenheit"
-          >Resultado</output>
-      </div>
-      <div class="box">
-        <p>Kelvin(K):</p>
-        <output class="result-box" type="text" id="resultado-kelvin"
-          >Resultado</output>
-=======
 
     <div class="container mx-auto my-8">
       <div class="grid grid-cols-1 sm:grid-cols-4 gap-10 "><!--este controla el tama;o de los recuadros grisces-->
@@ -158,21 +93,7 @@
           
           </div>
         </div>
->>>>>>> 37499bcf0d9aaa3a19de4483298fe271103892ce
       </div>
     </div>
-    <label for="rango">Selecciona un valor:</label>
-    <input
-      style="width: 90%"
-      type="range"
-      id="rango"
-      name="rango"
-      min="-1000"
-      max="1000"
-      step="1"
-      value="500"
-      oninput="getValue ()"
-    />
-    <output class="result-box" type="text" id="resultado">Resultado</output>
   </body>
 </html>
