@@ -20,7 +20,7 @@
     </div>
 
     <div class="container mx-auto my-8">
-      <div class="grid grid-cols-1 sm:grid-cols-3 gap-10">
+      <div class="grid grid-cols-1 sm:grid-cols-4 gap-10 "><!--este controla el tama;o de los recuadros grisces-->
         <div class="bg-gray-200 rounded-md p-6">
           <label for="grados" class="block text-gray-700 font-bold mb-2"
             >Digite la temperatura a convertir</label
@@ -34,7 +34,7 @@
           />
         </div>
 
-        <div class="bg-gray-200 rounded-md p-6">
+        <div class="bg-gray-200 w-70 rounded-md p-6">
           <label for="c" class="block text-gray-700 font-bold mb-2 text-lg"
             >Selecciona una opción:</label
           >
@@ -72,39 +72,25 @@
 
         <div class="bg-gray-200 rounded-md p-6">
           <div class="flex justify-center">
-            <div
-              class="box w-40 h-24 bg-white border border-black rounded-md flex justify-items-start items-center"
-            >
-              <p class="text-lg font-medium">Celsius (C):</p>
-              <output
-                id="resultado-celsius"
-                type="text"
-                class="ml-2 text-lg font-medium text-center"
-                >Resultado</output
-              >
+            <div style="display: flexbox;">
+              <p style="margin-left: 27px ; font-weight: bold; font-size: 15px;">Celsius (C):</p>
+              <div class="box w-35 h-20 bg-white border border-red rounded-md flex justify-center items-center ml-6">
+                <output id="resultado-celsius"type="text"class="text-lg font-medium text-center ">Resultado</output>
+              </div>
             </div>
-            <div
-              class="box w-40 h-24 bg-white border border-black rounded-md flex justify-center items-center ml-6"
-            >
-              <p class="text-lg font-medium">Fahrenheit (F):</p>
-              <output
-                id="resultado-fahrenheit"
-                type="text"
-                class="ml-2 text-lg font-medium text-center"
-                >Resultado</output
-              >
+            <div style="display: flexbox;">
+              <p style="margin-left: 27px ; font-weight: bold; font-size: 15px;">Fahrenheit (F):</p>
+              <div class="box w-35 h-20 bg-white border border-red rounded-md flex justify-center items-center ml-6">
+                <output id="resultado-fahrenheit"type="text"class="text-lg font-medium text-center ">Resultado</output>
+              </div>
             </div>
-            <div
-              class="box w-40 h-24 bg-white border border-black rounded-md flex justify-center items-center ml-6"
-            >
-              <p class="text-lg font-medium">Kelvin (K):</p>
-              <output
-                id="resultado-kelvin"
-                type="text"
-                class="ml-2 text-lg font-medium text-center"
-                >Resultado</output
-              >
+            <div style="display: flexbox;">
+              <p style="margin-left: 27px ; font-weight: bold; font-size: 15px;">Kelvin (K):</p>
+              <div class="box w-35 h-20 bg-white border border-red rounded-md flex justify-center items-center ml-6">
+                <output id="resultado-kelvin"type="text"class="text-lg font-medium text-center ">Resultado</output>
+              </div>
             </div>
+          
           </div>
         </div>
       </div>
