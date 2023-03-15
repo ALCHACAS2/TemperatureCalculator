@@ -10,22 +10,22 @@ function convertCelsiusToKelvin() {
 }
 function convertFahrenheitToCelsius() {
   grados = document.getElementById("grados").value;
-  var celsius = (grados - 32) / 1.8;
+  var celsius = ((grados - 32) / 1.8).toFixed(2);
   return celsius;
 }
 function convertFahrenheitToKelvin() {
   var celsius = convertFahrenheitToCelsius();
-  var kelvin = celsius + 273.15;
+  var kelvin = (celsius + 273.15).toFixed(2);
   return kelvin;
 }
 function convertKelvinToFahrenheit() {
   var celsius = kelvinToCelsius();
-  var fahrenheit = celsiusToFahrenheit(celsius);
+  var fahrenheit = (celsiusToFahrenheit(celsius)).toFixed(2);
   return fahrenheit;
 }
 function convertKelvinToCelsius() {
   grados = document.getElementById("grados").value;
-  var celsius = parseFloat(grados) - 273.15;
+  var celsius = (parseFloat(grados) - 273.15).toFixed(2);
   return celsius;
 }
 function kelvinToCelsius() {

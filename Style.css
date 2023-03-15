@@ -1,3 +1,5 @@
+@import url("https://cdn.jsdelivr.net/npm/tailwindcss/dist/tailwind.min.css");
+
 label {
   display: block;
   margin-bottom: 10px;
@@ -10,7 +12,7 @@ input[type="radio"] {
 input[type="radio"] + label {
   font-weight: normal;
   color: #666;
-}
+} 
 
 input[type="radio"]:checked + label {
   font-weight: bold;

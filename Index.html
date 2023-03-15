@@ -13,9 +13,9 @@
     <div class="container-elements">
       <div class="container-elements-center">
         <label style="font-size: 5vh">Selecciona una opción:</label>
-        <input class="input-selection" type="radio" id="c" name="eleccion">Celsius</input>
-        <input class="input-selection" type="radio" id="f" name="eleccion">Fahrenheit</input>
-        <input class="input-selection" type="radio" id="k" name="eleccion">Kelvin</input>
+        <input class="input-selection" type="radio" id="c" name="eleccion" oninput="todo()">Celsius</input>
+        <input class="input-selection" type="radio" id="f" name="eleccion" oninput="todo()">Fahrenheit</input>
+        <input class="input-selection" type="radio" id="k" name="eleccion" oninput="todo()">Kelvin</input>
         <!--input class="input-selection" type="radio" id="c" name="eleccion" />
         <input class="input-selection" type="radio" id="f" name="eleccion" />
         <input class="input-selection" type="radio" id="k" name="eleccion" /-->
@@ -23,8 +23,7 @@
       <br />
       <div class="container-elements-center">
         <label style="font-size: 5vh">Digite la temperatura a convertir</label>
-        <input class="input" placeholder="grados" id="grados" />
-        <button onclick="todo()">convert</button>
+        <input class="input" placeholder="grados" id="grados" oninput="todo()"/>
       </div>
     </div>
     <div class="container-output">
