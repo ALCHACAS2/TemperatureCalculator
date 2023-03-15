@@ -1,11 +1,11 @@
 function convertCelsiusToFahrenheit() {
   grados = document.getElementById("grados").value;
-  var fahrenheit = grados * 1.8 + 32;
+  var fahrenheit = (grados * 1.8 + 32).toFixed(2);
   return fahrenheit;
 }
 function convertCelsiusToKelvin() {
   grados = document.getElementById("grados").value;
-  var kelvin = parseFloat(grados) + 273.15;
+  var kelvin = (parseFloat(grados) + 273.15).toFixed(2);
   return kelvin;
 }
 function convertFahrenheitToCelsius() {
@@ -15,12 +15,12 @@ function convertFahrenheitToCelsius() {
 }
 function convertFahrenheitToKelvin() {
   var celsius = convertFahrenheitToCelsius();
-  var kelvin = (celsius + 273.15).toFixed(2);
+  var kelvin = (parseFloat(celsius) + 273.15).toFixed(2);
   return kelvin;
 }
 function convertKelvinToFahrenheit() {
   var celsius = kelvinToCelsius();
-  var fahrenheit = (celsiusToFahrenheit(celsius)).toFixed(2);
+  var fahrenheit = celsiusToFahrenheit(celsius).toFixed(2);
   return fahrenheit;
 }
 function convertKelvinToCelsius() {
@@ -54,13 +54,11 @@ function todo() {
     document.getElementById("resultado-celsius").textContent = document.getElementById("grados").value;
     document.getElementById("resultado-fahrenheit").textContent = convertCelsiusToFahrenheit();
     document.getElementById("resultado-kelvin").textContent = convertCelsiusToKelvin();
-
   }
   if (seleccion() == "f") {
     document.getElementById("resultado-celsius").textContent = convertFahrenheitToCelsius();
     document.getElementById("resultado-fahrenheit").textContent = document.getElementById("grados").value;
     document.getElementById("resultado-kelvin").textContent = convertFahrenheitToKelvin();
-
   }
   if (seleccion() == "k") {
     document.getElementById("resultado-celsius").textContent = convertKelvinToCelsius();
@@ -68,9 +66,11 @@ function todo() {
     document.getElementById("resultado-kelvin").textContent = document.getElementById("grados").value;
   }
 }
-function validacionDeEntrada(){
+function validacionDeEntrada() {
   var result = document.getElementById(grados).value;
-  if(document.getElementById(grados).value===null || document.getElementById(grados).t){
-
+  if (result === null || result.trim() === "") {
+    document.getElementById("resultado-celsius").textContent = "vacio";
+  }else{
+    document.getElementById("resultado-celsius").textContent = "lleno";
   }
 }
