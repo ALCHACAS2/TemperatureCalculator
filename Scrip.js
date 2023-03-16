@@ -108,4 +108,4 @@ function convertCelsiusToFahrenheit(grados) {
     }
     return grados;
   }
-  
+  //By ALCHACAS && Anders F.
