@@ -6,8 +6,9 @@
     <title>Calculadora de temperatura</title>
     <link rel="icon" href="images/calcular.png" />
     <script src="js/Scrip.js"></script>
-
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/tailwindcss/2.2.16/tailwind.min.css"/>
+    <link rel="stylesheet" href="css/copyright.css"/>
+    <meta name="author" content="Alvaro Chaves && Anders Flores">
   </head>
 
   <body class="bg-gray-100">
@@ -126,6 +127,10 @@
         <input style="width: 100%" type="range" id="rango" name="rango" min="-5001" max="5001" step="1" value="0" oninput="getValue()" />
         <output class="result-box" type="text" id="resultado">Resultado</output>
       </div>
+    </div>
+    <div class="fondo">
+      <img src="images/calcular.png" alt="Logo" width="30px" height="30px">
+      <span> &copy;Anders Flores && Alvaro Chaves</span>
     </div>
   </body>
 </html>
