@@ -1,20 +1,20 @@
 function convertCelsiusToFahrenheit(grados) {
-//   grados = document.getElementById("grados").value;
+  //   grados = document.getElementById("grados").value;
   var fahrenheit = (grados * 1.8 + 32).toFixed(2);
   return fahrenheit;
 }
 function convertCelsiusToKelvin(grados) {
-//   grados = document.getElementById("grados").value;
+  //   grados = document.getElementById("grados").value;
   var kelvin = (parseFloat(grados) + 273.15).toFixed(2);
   return kelvin;
 }
 function convertFahrenheitToCelsius(grados) {
-//   grados = document.getElementById("grados").value;
+  //   grados = document.getElementById("grados").value;
   var celsius = ((grados - 32) / 1.8).toFixed(2);
   return celsius;
 }
-function convertFahrenheitToKelvin() {
-  var celsius = convertFahrenheitToCelsius();
+function convertFahrenheitToKelvin(grados) {
+  var celsius = convertFahrenheitToCelsius(grados);
   var kelvin = (parseFloat(celsius) + 273.15).toFixed(2);
   return kelvin;
 }
@@ -24,12 +24,12 @@ function convertKelvinToFahrenheit(grados) {
   return fahrenheit;
 }
 function convertKelvinToCelsius(grados) {
-//   grados = document.getElementById("grados").value;
+  //   grados = document.getElementById("grados").value;
   var celsius = (parseFloat(grados) - 273.15).toFixed(2);
   return celsius;
 }
 function kelvinToCelsius(grados) {
-//   grados = document.getElementById("grados").value;
+  //   grados = document.getElementById("grados").value;
   return parseFloat(grados) - 273.15;
 }
 function celsiusToFahrenheit(celsius) {
@@ -49,30 +49,28 @@ function seleccion() {
 }
 
 function todo() {
-
+  var grados = asignarControladoresDeEventos();
+//   document.getElementById("rango").value = grados;
   if (seleccion() == "c") {
-    document.getElementById("resultado-celsius").textContent =
-      document.getElementById("grados").value;
+    document.getElementById("resultado-celsius").textContent = grados;
     document.getElementById("resultado-fahrenheit").textContent =
-      convertCelsiusToFahrenheit();
+      convertCelsiusToFahrenheit(grados);
     document.getElementById("resultado-kelvin").textContent =
-      convertCelsiusToKelvin();
+      convertCelsiusToKelvin(grados);
   }
   if (seleccion() == "f") {
     document.getElementById("resultado-celsius").textContent =
-      convertFahrenheitToCelsius();
-    document.getElementById("resultado-fahrenheit").textContent =
-      document.getElementById("grados").value;
+      convertFahrenheitToCelsius(grados);
+    document.getElementById("resultado-fahrenheit").textContent = grados;
     document.getElementById("resultado-kelvin").textContent =
-      convertFahrenheitToKelvin();
+      convertFahrenheitToKelvin(grados);
   }
   if (seleccion() == "k") {
     document.getElementById("resultado-celsius").textContent =
-      convertKelvinToCelsius();
+      convertKelvinToCelsius(grados);
     document.getElementById("resultado-fahrenheit").textContent =
-      convertKelvinToFahrenheit();
-    document.getElementById("resultado-kelvin").textContent =
-      document.getElementById("grados").value;
+      convertKelvinToFahrenheit(grados);
+    document.getElementById("resultado-kelvin").textContent = grados;
   }
 }
 function validacionDeEntrada() {
@@ -84,13 +82,29 @@ function validacionDeEntrada() {
   }
 }
 function getValue() {
+  todo();
   var valor = document.getElementById("rango").value;
   document.getElementById("resultado").textContent = valor;
+  document.getElementById("grados").value = valor;
   return valor;
 }
 
-function getValueTwo(){
-    var valorXRango = document.getElementById("rango").value;
-    var valorXTexto = document.getElementById("grados").value;
-    
+
+function asignarControladoresDeEventos() {
+  var ultimoInputModificado;
+  var grados;
+  document.getElementById("rango").onchange = function () {
+    ultimoInputModificado = "rangeInput";
+  };
+
+  document.getElementById("grados").onchange = function () {
+    ultimoInputModificado = "textInput";
+  };
+
+  if (ultimoInputModificado === "rangeInput") {
+    grados = document.getElementById("rango").value;
+  } else {
+    grados = document.getElementById("grados").value;
+  }
+  return grados;
 }

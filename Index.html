@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Calculadora de temperatura</title>
     <link rel="icon" href="images/calcular.png" />
-    <script src="Scrip.js"></script>
+    <script src="Prueba.js"></script>
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/tailwindcss/2.2.16/tailwind.min.css"
@@ -20,7 +20,8 @@
     </div>
 
     <div class="container mx-auto my-8">
-      <div class="grid grid-cols-1 sm:grid-cols-4 gap-10 "><!--este controla el tama;o de los recuadros grisces-->
+      <div class="grid grid-cols-1 sm:grid-cols-3 gap-x-10 gap-y-10">
+        <!--este controla el tama;o de los recuadros grisces-->
         <div class="bg-gray-200 rounded-md p-6">
           <label for="grados" class="block text-gray-700 font-bold mb-2"
             >Digite la temperatura a convertir</label
@@ -30,6 +31,8 @@
             type="text"
             class="block w-full bg-white border border-gray-400 rounded py-3 px-4 mb-3 leading-tight focus:outline-none focus:bg-white focus:border-gray-500"
             placeholder="grados"
+            name="rango"
+            value="0"
             oninput="todo()"
           />
         </div>
@@ -72,27 +75,58 @@
 
         <div class="bg-gray-200 rounded-md p-6">
           <div class="flex justify-center">
-            <div style="display: flexbox;">
-              <p style="margin-left: 27px ; font-weight: bold; font-size: 15px;">Celsius (C):</p>
-              <div class="box w-35 h-20 bg-white border border-red rounded-md flex justify-center items-center ml-6">
-                <output id="resultado-celsius"type="text"class="text-lg font-medium text-center ">Resultado</output>
+            <div style="display: flexbox">
+              <p style="margin-left: 27px; font-weight: bold; font-size: 15px">
+                Celsius (C):
+              </p>
+              <div
+                class="box w-35 h-20 bg-white border border-red rounded-md flex justify-center items-center ml-6"
+              >
+                <output
+                  id="resultado-celsius"
+                  type="text"
+                  class="text-lg font-medium text-center"
+                  >Resultado</output
+                >
               </div>
             </div>
-            <div style="display: flexbox;">
-              <p style="margin-left: 27px ; font-weight: bold; font-size: 15px;">Fahrenheit (F):</p>
-              <div class="box w-35 h-20 bg-white border border-red rounded-md flex justify-center items-center ml-6">
-                <output id="resultado-fahrenheit"type="text"class="text-lg font-medium text-center ">Resultado</output>
+            <div style="display: flexbox">
+              <p style="margin-left: 27px; font-weight: bold; font-size: 15px">
+                Fahrenheit (F):
+              </p>
+              <div
+                class="box w-35 h-20 bg-white border border-red rounded-md flex justify-center items-center ml-6"
+              >
+                <output
+                  id="resultado-fahrenheit"
+                  type="text"
+                  class="text-lg font-medium text-center"
+                  >Resultado</output
+                >
               </div>
             </div>
-            <div style="display: flexbox;">
-              <p style="margin-left: 27px ; font-weight: bold; font-size: 15px;">Kelvin (K):</p>
-              <div class="box w-35 h-20 bg-white border border-red rounded-md flex justify-center items-center ml-6">
-                <output id="resultado-kelvin"type="text"class="text-lg font-medium text-center ">Resultado</output>
+            <div style="display: flexbox">
+              <p style="margin-left: 27px; font-weight: bold; font-size: 15px">
+                Kelvin (K):
+              </p>
+              <div
+                class="box w-35 h-20 bg-white border border-red rounded-md flex justify-center items-center ml-6"
+              >
+                <output
+                  id="resultado-kelvin"
+                  type="text"
+                  class="text-lg font-medium text-center"
+                  >Resultado</output
+                >
               </div>
             </div>
-          
           </div>
         </div>
+      </div>
+      <div>
+        <label for="rango">Selecciona un valor:</label>
+        <input style="width: 100%" type="range" id="rango" name="rango" min="-5001" max="5001" step="1" value="0" oninput="getValue()" />
+        <output class="result-box" type="text" id="resultado">Resultado</output>
       </div>
     </div>
   </body>
